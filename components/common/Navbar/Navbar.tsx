@@ -1,10 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import s from "./Navbar.module.css";
-import { useDebounce } from "use-debounce";
-import { useLightboxContext } from "../../../contexts/lightboxContext";
-import ClientOnlyPortal from "../../clientOnlyPortal";
-import Cross from "../icons/cross";
 import ContactUs from "../../ContactUs";
 import { useUI } from "../../../contexts/uiContext";
 import Modal from "../Modal";
