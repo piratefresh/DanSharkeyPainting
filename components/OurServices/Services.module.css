@@ -1,0 +1,41 @@
+.servicesStyle {
+  display: grid;
+  width: 100%;
+  margin-top: 20px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". . . ."
+    "one one two two";
+  width: "100%";
+}
+
+.servicesMobileStyle {
+  display: grid;
+  width: 100%;
+  margin-top: 20px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  width: "100%";
+}
+
+.two-item-span {
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.gridArea2 {
+  grid-area: two;
+  height: 400px;
+}
+
+.gridArea1 {
+  grid-area: one;
+  height: 400px;
+}
