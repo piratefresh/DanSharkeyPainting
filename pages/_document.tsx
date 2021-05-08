@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
         <div id="fb-root"></div>
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
             window.fbAsyncInit = function() {
@@ -30,12 +30,12 @@ export default class MyDocument extends Document {
             }(document, 'script', 'facebook-jssdk'));
             `,
           }}
-        />
+        /> */}
 
         <div
           className="fb-customerchat"
-          attribution="page_inbox"
-          page_id="109278237988722"
+          data-attribution="page_inbox"
+          data-page_id="109278237988722"
         ></div>
       </Html>
     );

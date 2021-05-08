@@ -1,18 +1,15 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import PrimaryLayout from "../components/common/layout/PrimaryLayout";
-import Banner from "../components/Banner";
 import PinIcon from "../components/common/icons/pin";
 import EmailIcon from "../components/common/icons/email";
 import PhoneIcon from "../components/common/icons/phone";
 import ContactUs from "../components/ContactUs";
 import ImageSlider from "../components/ImageSlider";
-import ColorSamples from "../components/common/ColorSamples";
 import OurServices from "../components/OurServices";
 import Testimonals from "../components/Testimonals";
 import Map from "../components/Map";
 import Hero from "../components/Hero";
-import FacebookChat from "../components/FacebookChat/FacebookChat";
 
 const brushStyles = {
   backgroundImage: 'url("/painterbrushbg.png")',
