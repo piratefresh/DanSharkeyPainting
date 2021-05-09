@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface IProps {
   imageUrl: string;
   isTwoPlaces?: boolean;
@@ -15,7 +17,13 @@ export default function ServiceCard({
 }: IProps) {
   return (
     <div className={classes}>
-      <img src={imageUrl} alt="" className="h-2/4 w-full object-cover" />
+      <Image
+        width={400}
+        height={400}
+        src={imageUrl}
+        alt=""
+        className="h-2/4 w-full object-cover"
+      />
 
       <div className="p-4">
         <div className="text-2xl my-4 font-bold">{serviceTitle}</div>

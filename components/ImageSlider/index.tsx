@@ -11,6 +11,7 @@ import "swiper/swiper-bundle.min.css";
 import useDetectDevice from "../../hooks/useDetectDevice";
 import { useLightboxContext } from "../../contexts/lightboxContext";
 import Lightbox from "../Lightbox";
+import Image from "next/image";
 
 interface IImage {
   url: string;
@@ -64,7 +65,13 @@ const ImageSlider = ({ bannerSlideBlock }: any) => {
       </Swiper>
       {isOpenLightbox ? (
         <Lightbox>
-          <img src={image.url} alt="" />
+          <Image
+            layout="responsive"
+            width={700}
+            height={475}
+            src={image.url}
+            alt=""
+          />
         </Lightbox>
       ) : null}
     </>

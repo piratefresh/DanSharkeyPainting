@@ -1,4 +1,5 @@
-import useDetectDevice from "../../hooks/useDetectDevice";
+import Image from "next/image";
+import useIsTouchScreen from "../../hooks/useIsTouch";
 
 const painterTextStyle = {
   backgroundImage:
@@ -11,10 +12,10 @@ const painterTextStyle = {
 };
 
 export default function Hero() {
-  const device = useDetectDevice();
+  const { isTabletOrMobile } = useIsTouchScreen();
   return (
     <div
-      className="flex flex-col md:grid items-center md:grid-cols-2 sm:my-8 rounded-2xl"
+      className="flex flex-col items-center md:grid md:grid-cols-2 sm:my-8 rounded-2xl"
       style={{ height: "500px", backgroundColor: "#f8f4f2" }}
     >
       <div className="my-auto ml-8">
@@ -37,7 +38,9 @@ export default function Hero() {
           alt=""
         />
       )} */}
-      <img
+      <Image
+        width={500}
+        height={500}
         className="flex items-center object-contain"
         src="/houseBanner.png"
         alt=""
