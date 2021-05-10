@@ -30,9 +30,7 @@ export default function Testimonals() {
         <div className="text-4xl font-bold text-blue-400">Testimonals</div>
         <p className="">Our Reviews</p>
       </div>
-      <div
-        style={!isTabletOrMobile ? testimonalsMobileStyle : testimonalsStyle}
-      >
+      <div style={isTabletOrMobile ? testimonalsMobileStyle : testimonalsStyle}>
         <TestimonalCard>
           <div className="flex flex-col">John Doe</div>
           <div>"It’s not about ideas. It’s about making ideas happen."</div>

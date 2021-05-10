@@ -30,13 +30,13 @@ const PrimaryLayout = ({
     <div style={SecondaryStyles}>
       <div
         className={`${noCenter ? "" : "mx-auto"} ${
-          isTabletOrMobile ? "w-2/3" : "p-4"
+          isTabletOrMobile ? "p-4" : "w-2/3"
         }`}
       >
-        {isTabletOrMobile ? <Navbar /> : null}
+        {!isTabletOrMobile ? <Navbar /> : null}
         {children}
       </div>
-      {!isTabletOrMobile ? <MobileNav /> : null}
+      {isTabletOrMobile ? <MobileNav /> : null}
     </div>
   );
 };

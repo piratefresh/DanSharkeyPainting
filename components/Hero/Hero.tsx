@@ -18,7 +18,7 @@ export default function Hero() {
   const { isTabletOrMobile } = useIsTouchScreen();
   return (
     <div
-      className={`${isTabletOrMobile ? s.fullscreenRoot : s.mobileRoot}`}
+      className={`${isTabletOrMobile ? s.mobileRoot : s.fullscreenRoot}`}
       style={{ height: "500px", backgroundColor: "#f8f4f2" }}
     >
       <div className="my-auto ml-8">
