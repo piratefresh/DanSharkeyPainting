@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
       ) : (
         <div
-          className="grid grid-cols-2 items-center"
+          className="flex flex-row items-center"
           style={{ height: "500px", backgroundColor: "#f8f4f2" }}
         >
           <div className="my-auto ml-8">
