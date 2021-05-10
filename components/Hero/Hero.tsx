@@ -15,7 +15,11 @@ export default function Hero() {
   const { isTabletOrMobile } = useIsTouchScreen();
   return (
     <div
-      className="flex flex-col items-center md:grid md:grid-cols-2 sm:my-8 rounded-2xl"
+      className={`${
+        isTabletOrMobile
+          ? "flex flex-col items-center sm:my-8 rounded-2xl"
+          : "items-center md:grid md:grid-cols-2 sm:my-8 rounded-2xl"
+      }`}
       style={{ height: "500px", backgroundColor: "#f8f4f2" }}
     >
       <div className="my-auto ml-8">
