@@ -1,4 +1,4 @@
-import useDetectDevice from "../../hooks/useDetectDevice";
+import useIsTouchScreen from "../../hooks/useIsTouch";
 import TestimonalCard from "./TestimonalCard";
 
 const testimonalsStyle = {
@@ -20,7 +20,7 @@ const testimonalsMobileStyle = {
 };
 
 export default function Testimonals() {
-  const device = useDetectDevice();
+  const { isTabletOrMobile } = useIsTouchScreen();
   return (
     <div
       className="p-4 my-8 rounded-2xl"
@@ -31,11 +31,7 @@ export default function Testimonals() {
         <p className="">Our Reviews</p>
       </div>
       <div
-        style={
-          device.isMobile || device.isTablet
-            ? testimonalsMobileStyle
-            : testimonalsStyle
-        }
+        style={!isTabletOrMobile ? testimonalsMobileStyle : testimonalsStyle}
       >
         <TestimonalCard>
           <div className="flex flex-col">John Doe</div>
