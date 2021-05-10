@@ -16,7 +16,7 @@ export default function OurServices() {
         className={isTabletOrMobile ? s.servicesMobileStyle : s.servicesStyle}
       >
         <ServiceCard
-          imageUrl="interiorpaint.jpg"
+          imageUrl="services/interiorpaint.jpg"
           serviceTitle="Interior Painting"
           serviceDesc="Paint the interior of your house"
           classes={`relative bg-white rounded-2xl flex flex-col ${
@@ -25,7 +25,7 @@ export default function OurServices() {
         />
 
         <ServiceCard
-          imageUrl="exteriorpaint.jpg"
+          imageUrl="services/exteriorpaint.jpg"
           serviceTitle="Exterior Painting"
           serviceDesc="Paint the exterior of your house"
           classes={`relative bg-white rounded-2xl flex flex-col ${
@@ -33,25 +33,25 @@ export default function OurServices() {
           }`}
         />
         <ServiceCard
-          imageUrl="custompaint.jpg"
+          imageUrl="services/custompaint.jpg"
           serviceTitle="Stucco Repair"
           serviceDesc="Paint the exterior of your house"
           classes="relative bg-white rounded-2xl flex flex-col"
         />
         <ServiceCard
-          imageUrl="bathroompaint.jpg"
+          imageUrl="services/bathroompaint.jpg"
           serviceTitle="Dry Wall Repair"
           serviceDesc="Paint the exterior of your house"
           classes="relative bg-white rounded-2xl flex flex-col"
         />
         <ServiceCard
-          imageUrl="bathroompaint.jpg"
+          imageUrl="services/wallpaperremoval.jpg"
           serviceTitle="Wall Paper Removal"
           serviceDesc="Paint the exterior of your house"
           classes="relative bg-white rounded-2xl flex flex-col"
         />
         <ServiceCard
-          imageUrl="bathroompaint.jpg"
+          imageUrl="services/pwashing.jpg"
           serviceTitle="Power Washing"
           serviceDesc="Paint the exterior of your house"
           classes="relative bg-white rounded-2xl flex flex-col"
