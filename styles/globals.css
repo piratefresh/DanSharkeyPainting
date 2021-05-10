@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Inter";
   font-display: swap;
-  src: url("/fonts/inter/inter-SemiBold.ttf");
-  src: url("/fonts/inter/inter-Bold.ttf");
-  src: url("/fonts/inter/inter-Light.ttf");
-  src: url("/fonts/inter/inter-Regular.ttf");
+  src: url("/fonts/inter/Inter-SemiBold.ttf");
+  src: url("/fonts/inter/Inter-Bold.ttf");
+  src: url("/fonts/inter/Inter-Light.ttf");
+  src: url("/fonts/inter/Inter-Regular.ttf");
 }
 
 html,
