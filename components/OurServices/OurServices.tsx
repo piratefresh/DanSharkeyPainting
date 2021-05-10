@@ -13,14 +13,14 @@ export default function OurServices() {
         Our Services
       </div>
       <div
-        className={!isTabletOrMobile ? s.servicesMobileStyle : s.servicesStyle}
+        className={isTabletOrMobile ? s.servicesStyle : s.servicesMobileStyle}
       >
         <ServiceCard
           imageUrl="services/interiorpaint.jpg"
           serviceTitle="Interior Painting"
           serviceDesc="Paint the interior of your house"
           classes={`relative bg-white rounded-2xl flex flex-col ${
-            !isTabletOrMobile ? null : s.gridArea1
+            isTabletOrMobile ? s.gridArea1 : null
           }`}
         />
 
@@ -29,7 +29,7 @@ export default function OurServices() {
           serviceTitle="Exterior Painting"
           serviceDesc="Paint the exterior of your house"
           classes={`relative bg-white rounded-2xl flex flex-col ${
-            !isTabletOrMobile ? null : s.gridArea2
+            isTabletOrMobile ? s.gridArea2 : null
           }`}
         />
         <ServiceCard
