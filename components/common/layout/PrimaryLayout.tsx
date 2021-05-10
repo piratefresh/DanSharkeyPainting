@@ -29,10 +29,8 @@ const PrimaryLayout = ({
 
   return (
     <div style={SecondaryStyles}>
-      <div className={`${s.root} ${noCenter ? "" : "mx-auto"}`}>
-        {isDesktopOrLaptop ? <Navbar /> : null}
-        {children}
-      </div>
+      {isDesktopOrLaptop ? <Navbar /> : null}
+      <div className={`${s.root} ${noCenter ? "" : "mx-auto"}`}>{children}</div>
       {isTabletOrMobile ? <MobileNav /> : null}
     </div>
   );

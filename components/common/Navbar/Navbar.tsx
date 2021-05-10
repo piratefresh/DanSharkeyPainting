@@ -12,6 +12,8 @@ const navStyles = {
   alignItems: "center",
   gridColumnGap: "10px",
   gridRowGap: "10px",
+  width: "66.666667%",
+  margin: "0 auto",
 };
 
 const stickyStyles = {
@@ -24,6 +26,8 @@ const stickyStyles = {
   position: "fixed",
   zIndex: "50",
   backgroundColor: "#fdf8f4",
+  width: "66.666667%",
+  margin: "0 auto",
 };
 
 function Navbar() {
