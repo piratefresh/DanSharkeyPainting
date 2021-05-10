@@ -11,11 +11,6 @@ type Props = {
   noCenter?: boolean;
 };
 
-const PrimaryStyles = {
-  backgroundImage: 'url("/backgroundPainter1.jpg")',
-  backgroundRepeat: "no-repeat",
-};
-
 const SecondaryStyles = {
   backgroundColor: "#fdf8f4",
 };

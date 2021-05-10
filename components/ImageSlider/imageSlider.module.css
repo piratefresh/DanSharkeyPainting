@@ -1,5 +1,5 @@
 .root {
-  @apply sticky top-0 z-40 transition-all duration-150;
+  @apply w-full h-full;
 }
 
 .link {
@@ -29,3 +29,9 @@
   object-fit: cover;
   object-position: center center;
 }
+
+/* @media (max-width: 1224px) {
+  .root {
+    height: 400px;
+  }
+} */

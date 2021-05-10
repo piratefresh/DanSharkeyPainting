@@ -20,13 +20,13 @@ export default function Testimonals() {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {testimonals.map((testimonal) => {
+        {testimonals.map((testimonal, index: number) => {
           return (
-            <TestimonalCard>
+            <TestimonalCard key={index}>
               <div className={s.testimonalText}>
-                <span className="font-bold text-2xl">"</span>
+                <span className="font-bold text-sm md:text-2xl">"</span>
                 {testimonal.review}
-                <span className="font-bold text-2xl">"</span>
+                <span className="font-bold text-sm md:text-2xl">"</span>
               </div>
               <div className="flex flex-col font-semibold">
                 {testimonal.name}

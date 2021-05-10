@@ -8,11 +8,11 @@ import SwiperCore, {
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
-import useDetectDevice from "../../hooks/useDetectDevice";
 import { useLightboxContext } from "../../contexts/lightboxContext";
 import Lightbox from "../Lightbox";
 import Image from "next/image";
 import s from "./imageSlider.module.css";
+import useIsTouchScreen from "../../hooks/useIsTouch";
 
 interface IImage {
   url: string;
@@ -51,7 +51,7 @@ const bannerSlideBlock = [
 ];
 
 const ImageSlider = () => {
-  const device = useDetectDevice();
+  const { isTabletOrMobile } = useIsTouchScreen();
   const {
     isOpenLightbox,
     openLightbox,
@@ -66,9 +66,9 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="w-full h-full">
+    <div className={s.root}>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={isTabletOrMobile ? 1 : 2}
         spaceBetween={30}
         pagination={{ clickable: true }}
         centeredSlides
@@ -82,21 +82,15 @@ const ImageSlider = () => {
               src={item.url}
               className={`"object-cover rounded-md ${s.imageStyle}"`}
               layout="responsive"
-              width={600}
-              height={350}
+              width={800}
+              height={600}
             />
           </SwiperSlide>
         ))}
       </Swiper>
       {isOpenLightbox ? (
         <Lightbox>
-          <Image
-            layout="responsive"
-            width={700}
-            height={475}
-            src={image.url}
-            alt=""
-          />
+          <Image width={700} height={475} src={image.url} alt="" />
         </Lightbox>
       ) : null}
     </div>
