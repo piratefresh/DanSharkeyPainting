@@ -38,9 +38,7 @@ export default function Hero() {
           alt=""
         />
       )} */}
-      <Image
-        width={500}
-        height={500}
+      <img
         className="flex items-center object-contain"
         src="https://res.cloudinary.com/film-it/image/upload/v1620606048/Dan%20Sharkey%20Painting/houseBanner.png"
         alt=""
