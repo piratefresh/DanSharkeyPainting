@@ -61,7 +61,7 @@ export default function Home() {
 
       {/* <ColorSamples color="red" /> */}
 
-      <Map />
+      {/* <Map /> */}
 
       <footer className={styles.footer}>
         <a
