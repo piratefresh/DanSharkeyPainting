@@ -1,23 +1,8 @@
 import useIsTouchScreen from "../../hooks/useIsTouch";
 import TestimonalCard from "./TestimonalCard";
-
-const testimonalsStyle = {
-  display: "grid",
-  gridAutoColumns: "1fr",
-  gridColumnGap: "30px",
-  gridRowGap: "16px",
-  gridTemplateColumns: "1fr 1fr 1fr",
-  gridTemplateRows: "auto",
-};
-
-const testimonalsMobileStyle = {
-  display: "grid",
-  gridAutoColumns: "1fr",
-  gridColumnGap: "30px",
-  gridRowGap: "16px",
-  gridTemplateColumns: "1fr",
-  gridTemplateRows: "auto",
-};
+import Masonry from "react-masonry-css";
+import s from "./Testimonals.module.css";
+import { testimonals } from "./TestimonalData";
 
 export default function Testimonals() {
   const { isTabletOrMobile } = useIsTouchScreen();
@@ -30,33 +15,26 @@ export default function Testimonals() {
         <div className="text-4xl font-bold text-blue-400">Testimonals</div>
         <p className="">Our Reviews</p>
       </div>
-      <div style={isTabletOrMobile ? testimonalsMobileStyle : testimonalsStyle}>
-        <TestimonalCard>
-          <div className="flex flex-col">John Doe</div>
-          <div>"It’s not about ideas. It’s about making ideas happen."</div>
-        </TestimonalCard>
-        <TestimonalCard>
-          <div className="flex flex-col">John Doe</div>
-          <div>
-            "Easily coordinated, great work. We’d put painting a couple of rooms
-            ‘until’ we had extra time on our hands. That never materialized. So
-            glad I did. 2 rooms done in 6 hours, looks great! Will definitely
-            use the service again."
-          </div>
-        </TestimonalCard>
-        <TestimonalCard>
-          <div className="flex flex-col">John Doe</div>
-          <div>
-            "I had the best experience with Paintzen. They were easy to
-            communicate with during the quote process. I had two small projects
-            to hang wallpaper on accent walls in two separate rooms and they
-            gave us a fair quote. They were timely and did a stellar job! I was
-            worried about the installation because the wallpaper prints I chose
-            had complicated patterns, but their attention to detail and making
-            sure the patterns lined up was excellent, it looks seamless! "
-          </div>
-        </TestimonalCard>
-      </div>
+      <Masonry
+        breakpointCols={isTabletOrMobile ? 1 : 3}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
+        {testimonals.map((testimonal) => {
+          return (
+            <TestimonalCard>
+              <div className={s.testimonalText}>
+                <span className="font-bold text-2xl">"</span>
+                {testimonal.review}
+                <span className="font-bold text-2xl">"</span>
+              </div>
+              <div className="flex flex-col font-semibold">
+                {testimonal.name}
+              </div>
+            </TestimonalCard>
+          );
+        })}
+      </Masonry>
       <div className="flex">
         <button className="bg-blue-500 rounded-xl p-2 text-white mt-8 text-lg mx-auto">
           <a href="/testimonals">Read more..</a>

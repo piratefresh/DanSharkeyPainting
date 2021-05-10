@@ -28,7 +28,6 @@ const stickyStyles = {
 
 function Navbar() {
   const [isSticky, setSticky] = React.useState(false);
-  const ref = React.useRef() as React.MutableRefObject<HTMLDivElement>;
   const { displayModal, openModal, closeModal, modalView } = useUI();
 
   const handleScroll = () => {

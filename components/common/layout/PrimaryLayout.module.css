@@ -1,0 +1,9 @@
+.root {
+  @apply w-2/3;
+}
+
+@media (max-width: 1224px) {
+  .root {
+    @apply p-4 w-full;
+  }
+}

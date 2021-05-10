@@ -1,0 +1,18 @@
+.root {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+@media (max-width: 1224px) {
+  .root {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonalText {
+  color: #666;
+}

@@ -9,7 +9,45 @@
   grid-template-areas:
     "one one two two"
     ". . . .";
-  width: "100%";
+  width: 100%;
+}
+
+.gridArea2 {
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  grid-area: two;
+  height: 400px;
+}
+
+.gridArea1 {
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  grid-area: one;
+  height: 400px;
+}
+
+.root {
+  @apply relative bg-white rounded-2xl flex flex-col text-sm md:text-base;
+}
+
+@media (max-width: 1224px) {
+  .servicesStyle {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: none;
+  }
+  .gridArea2 {
+    grid-area: auto;
+  }
+  .gridArea1 {
+    grid-area: auto;
+  }
 }
 
 .servicesMobileStyle {
@@ -18,8 +56,7 @@
   margin-top: 20px;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+
   width: "100%";
 }
 
@@ -29,13 +66,4 @@
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-}
-.gridArea2 {
-  grid-area: two;
-  height: 400px;
-}
-
-.gridArea1 {
-  grid-area: one;
-  height: 400px;
 }

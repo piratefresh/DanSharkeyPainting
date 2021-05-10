@@ -1,14 +1,15 @@
 import Link from "next/link";
-import useDetectDevice from "../../hooks/useDetectDevice";
+
+import useIsTouchScreen from "../../hooks/useIsTouch";
 import DropdownMenu from "../common/DropdownMenu";
 import s from "./MobileNav.module.css";
 
 export default function MobileNav() {
-  const device = useDetectDevice();
+  const { isTablet } = useIsTouchScreen();
   return (
     <nav className="fixed bottom-0 z-50 bg-white flex w-full p-2">
       <ul className="flex flex-row justify-between w-full items-center mx-4">
-        {device.isTablet ? (
+        {isTablet ? (
           <>
             <Link href="/services">
               <a className={s.link}>Services</a>

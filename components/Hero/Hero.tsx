@@ -17,10 +17,7 @@ const painterTextStyle = {
 export default function Hero() {
   const { isTabletOrMobile } = useIsTouchScreen();
   return (
-    <div
-      className={`${isTabletOrMobile ? s.mobileRoot : s.fullscreenRoot}`}
-      style={{ height: "500px", backgroundColor: "#f8f4f2" }}
-    >
+    <div className={s.root}>
       <div className="my-auto ml-8">
         <h1 className="text-6xl">Dan Sharkey's Painting</h1>
         <p className="text-4xl">

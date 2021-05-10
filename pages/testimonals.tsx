@@ -1,7 +1,6 @@
 import PrimaryLayout from "../components/common/layout/PrimaryLayout";
 import TestimonalCard from "../components/Testimonals/TestimonalCard";
 import Masonry from "react-masonry-css";
-import styles from "../styles/Testimonals.module.css";
 import Header from "../components/common/Header";
 
 export default function Testimonals() {

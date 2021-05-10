@@ -11,6 +11,7 @@ import Testimonals from "../components/Testimonals";
 import Map from "../components/Map";
 import Hero from "../components/Hero";
 import Header from "../components/common/Header";
+import FacebookIcon from "../components/common/icons/facebookIcon";
 
 const location = {
   address: "1600 Amphitheatre Parkway, Mountain View, california.",
@@ -32,18 +33,20 @@ export default function Home() {
         style={{ backgroundColor: "rgba(255, 101, 1, 0.12)" }}
       >
         <Header title="Contact Us" subtitle="Our Contact Information" />
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
+        <div className="grid gap-2 md:gap-4 grid-cols-1 sm:grid-cols-3">
           <div className="flex flex-col items-center p-4 cursor-pointer">
             <PhoneIcon fillColor="#3B82F6" />
-            <div className="sm:my-4">+1(610) 605-0473</div>
+            <div className="md:my-4">+1(610) 605-0473</div>
           </div>
           <div className="flex flex-col items-center p-4 cursor-pointer">
             <EmailIcon fillColor="#3B82F6" />
-            <div className="sm:my-4">sharkeypainting@gmail.com</div>
+            <div className="my-1 md:my-4">sharkeypainting@gmail.com</div>
           </div>
           <div className="flex flex-col items-center p-4 cursor-pointer">
             <PinIcon fillColor="#3B82F6" />
-            <div className="sm:my-4">142 Fiesta Town, Delaware County, PA</div>
+            <div className="my-1 md:my-4">
+              142 Fiesta Town, Delaware County, PA
+            </div>
           </div>
         </div>
 
@@ -57,15 +60,42 @@ export default function Home() {
 
       {/* <ColorSamples color="red" /> */}
 
-      {/* <Map /> */}
+      <Map />
 
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-      </footer> */}
+      <footer className={styles.footer}>
+        <div>
+          <h2 className="font-semibold text-2xl mb-4">
+            <a>Dan's Sharkey Painting</a>
+          </h2>
+          <p>
+            At the Start...Consider the Finish! Experienced Professionals of
+            Interior and Exterior Painting, Power Washing and Stucco Repairs for
+            Commercial and Residential Properties.
+          </p>
+        </div>
+        <div></div>
+        <div>
+          <h2 className="font-semibold text-lg mb-4">Contact Information</h2>
+          <div className="flex flex-col">
+            <div className="my-2">+1(610) 605-0473</div>
+
+            <div className="my-2">sharkeypainting@gmail.com</div>
+
+            <div className="my-2">142 Fiesta Town, Delaware County, PA</div>
+          </div>
+        </div>
+        <div>
+          <h2 className="font-semibold text-lg mb-4">Socials</h2>
+          <div>
+            <a
+              href="https://www.facebook.com/DanSharkeysPainting"
+              className="bg-blue-600 w-12 h-12 items-center justify-center flex rounded-lg"
+            >
+              <FacebookIcon />
+            </a>
+          </div>
+        </div>
+      </footer>
     </PrimaryLayout>
   );
 }

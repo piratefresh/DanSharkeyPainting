@@ -2,9 +2,6 @@
   align-items: center;
   height: 500px;
   background-color: #f8f4f2;
-}
-
-.fullscreenRoot {
   align-items: center;
   height: 500px;
   background-color: #f8f4f2;
@@ -12,10 +9,12 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.mobileRoot {
-  align-items: center;
-  height: 500px;
-  background-color: #f8f4f2;
-  display: flex;
-  flex-direction: column;
+@media (max-width: 1224px) {
+  .root {
+    align-items: center;
+    height: 500px;
+    background-color: #f8f4f2;
+    display: flex;
+    flex-direction: column;
+  }
 }

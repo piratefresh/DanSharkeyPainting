@@ -18,6 +18,7 @@ export default function ServiceCard({
   return (
     <div className={classes}>
       <Image
+        layout="responsive"
         width={300}
         height={300}
         src={`/${imageUrl}`}
@@ -26,7 +27,7 @@ export default function ServiceCard({
       />
 
       <div className="p-4">
-        <div className="text-2xl my-4 font-bold">{serviceTitle}</div>
+        <div className="text-lg md:text-2xl my-4 font-bold">{serviceTitle}</div>
         <p>{serviceDesc}</p>
       </div>
     </div>

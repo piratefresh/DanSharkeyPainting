@@ -3,6 +3,7 @@ import useIsTouchScreen from "../../../hooks/useIsTouch";
 import MobileNav from "../../MobileNav";
 import DropdownMenu from "../DropdownMenu";
 import Navbar from "../Navbar/Navbar";
+import s from "./PrimaryLayout.module.css";
 
 type Props = {
   children: React.ReactNode;
@@ -24,16 +25,12 @@ const PrimaryLayout = ({
   noCenter = false,
   children,
 }: Props) => {
-  const { isTabletOrMobile } = useIsTouchScreen();
+  const { isTabletOrMobile, isDesktopOrLaptop } = useIsTouchScreen();
 
   return (
     <div style={SecondaryStyles}>
-      <div
-        className={`${noCenter ? "" : "mx-auto"} ${
-          isTabletOrMobile ? "p-4" : "w-2/3"
-        }`}
-      >
-        {!isTabletOrMobile ? <Navbar /> : null}
+      <div className={`${s.root} ${noCenter ? "" : "mx-auto"}`}>
+        {isDesktopOrLaptop ? <Navbar /> : null}
         {children}
       </div>
       {isTabletOrMobile ? <MobileNav /> : null}
