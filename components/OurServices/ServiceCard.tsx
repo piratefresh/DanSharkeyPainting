@@ -18,8 +18,8 @@ export default function ServiceCard({
   return (
     <div className={classes}>
       <Image
-        width={400}
-        height={400}
+        width={300}
+        height={300}
         src={`/${imageUrl}`}
         alt=""
         className="h-2/4 w-full object-cover"

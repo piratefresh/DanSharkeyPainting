@@ -66,7 +66,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <>
+    <div className="w-full h-full">
       <Swiper
         slidesPerView={2}
         spaceBetween={30}
@@ -99,7 +99,7 @@ const ImageSlider = () => {
           />
         </Lightbox>
       ) : null}
-    </>
+    </div>
   );
 };
 

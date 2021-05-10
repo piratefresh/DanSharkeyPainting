@@ -42,7 +42,7 @@ export default function Hero() {
         width={500}
         height={500}
         className="flex items-center object-contain"
-        src="/houseBanner.png"
+        src="https://res.cloudinary.com/film-it/image/upload/v1620606048/Dan%20Sharkey%20Painting/houseBanner.png"
         alt=""
       />
     </div>
