@@ -10,6 +10,7 @@ import OurServices from "../components/OurServices";
 import Testimonals from "../components/Testimonals";
 import Map from "../components/Map";
 import Hero from "../components/Hero";
+import Header from "../components/common/Header";
 
 const brushStyles = {
   backgroundImage: 'url("/painterbrushbg.png")',
@@ -36,6 +37,7 @@ export default function Home() {
         className="my-8 p-4 rounded-2xl"
         style={{ backgroundColor: "rgba(255, 101, 1, 0.12)" }}
       >
+        <Header title="Contact Us" subtitle="Our Contact Information" />
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
           <div className="flex flex-col items-center p-4 cursor-pointer">
             <PhoneIcon fillColor="#3B82F6" />
@@ -47,7 +49,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center p-4 cursor-pointer">
             <PinIcon fillColor="#3B82F6" />
-            <div className="sm:my-4">142 Fiesta Town</div>
+            <div className="sm:my-4">142 Fiesta Town, Delaware County, PA</div>
           </div>
         </div>
 
