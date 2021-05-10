@@ -12,12 +12,6 @@ import Map from "../components/Map";
 import Hero from "../components/Hero";
 import Header from "../components/common/Header";
 
-const brushStyles = {
-  backgroundImage: 'url("/painterbrushbg.png")',
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-};
-
 const location = {
   address: "1600 Amphitheatre Parkway, Mountain View, california.",
   lat: 37.42216,

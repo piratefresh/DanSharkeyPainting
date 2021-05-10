@@ -15,10 +15,10 @@ export default function Hero() {
   const { isTabletOrMobile } = useIsTouchScreen();
   return (
     <div
-      className={`${
+      className={`"my-8 rounded-2xl" ${
         isTabletOrMobile
-          ? "flex flex-col items-center sm:my-8 rounded-2xl"
-          : "items-center md:grid md:grid-cols-2 sm:my-8 rounded-2xl"
+          ? "flex flex-col"
+          : "items-center md:grid md:grid-cols-2"
       }`}
       style={{ height: "500px", backgroundColor: "#f8f4f2" }}
     >
@@ -29,19 +29,6 @@ export default function Hero() {
           for your housing projects
         </p>
       </div>
-      {/* {device.isTablet ? (
-        <img
-          className="flex items-center h-full object-cover"
-          style={{ width: "1000px" }}
-          src="/painterbrushbg.png"
-        />
-      ) : (
-        <img
-          className="flex items-center object-contain"
-          src="/houseBanner.png"
-          alt=""
-        />
-      )} */}
       <img
         className="flex items-center object-contain"
         src="https://res.cloudinary.com/film-it/image/upload/v1620606048/Dan%20Sharkey%20Painting/houseBanner.png"
