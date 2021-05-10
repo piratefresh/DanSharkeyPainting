@@ -20,7 +20,7 @@ export default function ServiceCard({
       <Image
         width={400}
         height={400}
-        src={imageUrl}
+        src={`/${imageUrl}`}
         alt=""
         className="h-2/4 w-full object-cover"
       />

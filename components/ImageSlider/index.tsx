@@ -12,6 +12,7 @@ import useDetectDevice from "../../hooks/useDetectDevice";
 import { useLightboxContext } from "../../contexts/lightboxContext";
 import Lightbox from "../Lightbox";
 import Image from "next/image";
+import s from "./imageSlider.module.css";
 
 interface IImage {
   url: string;
@@ -21,7 +22,35 @@ interface IImage {
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-const ImageSlider = ({ bannerSlideBlock }: any) => {
+const bannerSlideBlock = [
+  {
+    id: "1",
+    url:
+      "https://res.cloudinary.com/film-it/image/upload/v1620604730/Dan%20Sharkey%20Painting/philadelphia_home-960w.jpg",
+  },
+  {
+    id: "2",
+    url:
+      "https://res.cloudinary.com/film-it/image/upload/v1620604730/Dan%20Sharkey%20Painting/pexels-photo-206172.webp",
+  },
+  {
+    id: "3",
+    url:
+      "https://res.cloudinary.com/film-it/image/upload/v1620604730/Dan%20Sharkey%20Painting/pexels-photo-221540.jpg",
+  },
+  {
+    id: "4",
+    url:
+      "https://res.cloudinary.com/film-it/image/upload/v1620604730/Dan%20Sharkey%20Painting/photo-1597218868981-1b68e15f0065.webp",
+  },
+  {
+    id: "5",
+    url:
+      "https://res.cloudinary.com/film-it/image/upload/v1620604584/Dan%20Sharkey%20Painting/interiorpaint.jpg",
+  },
+];
+
+const ImageSlider = () => {
   const device = useDetectDevice();
   const {
     isOpenLightbox,
@@ -48,17 +77,13 @@ const ImageSlider = ({ bannerSlideBlock }: any) => {
       >
         {bannerSlideBlock.map((item: any, index: number) => (
           <SwiperSlide key={item.id}>
-            <img
+            <Image
               onClick={() => handleOnClick(item)}
               src={item.url}
-              alt=""
-              className="object-cover rounded-md"
-              style={{
-                width: "100%",
-                height: "350px",
-                objectFit: "cover",
-                objectPosition: "center center",
-              }}
+              className={`"object-cover rounded-md ${s.imageStyle}"`}
+              layout="responsive"
+              width={700}
+              height={475}
             />
           </SwiperSlide>
         ))}

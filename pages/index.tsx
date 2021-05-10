@@ -17,29 +17,6 @@ const brushStyles = {
   backgroundPosition: "center",
 };
 
-const bannerSlideBlock = [
-  {
-    id: "1",
-    url:
-      "https://images.unsplash.com/photo-1607825143539-cfa208347057?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "2",
-    url:
-      "https://images.unsplash.com/photo-1597218868981-1b68e15f0065?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
-  },
-  {
-    id: "3",
-    url:
-      "https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-  {
-    id: "4",
-    url:
-      "https://images.pexels.com/photos/221540/pexels-photo-221540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-  },
-];
-
 const location = {
   address: "1600 Amphitheatre Parkway, Mountain View, california.",
   lat: 37.42216,
@@ -76,7 +53,7 @@ export default function Home() {
 
         <ContactUs />
       </div>
-      <ImageSlider bannerSlideBlock={bannerSlideBlock} />
+      <ImageSlider />
 
       <OurServices />
 
