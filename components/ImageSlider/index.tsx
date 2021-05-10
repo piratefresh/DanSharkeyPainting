@@ -82,8 +82,8 @@ const ImageSlider = () => {
               src={item.url}
               className={`"object-cover rounded-md ${s.imageStyle}"`}
               layout="responsive"
-              width={700}
-              height={475}
+              width={600}
+              height={350}
             />
           </SwiperSlide>
         ))}
