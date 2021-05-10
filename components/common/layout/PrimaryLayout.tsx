@@ -33,9 +33,10 @@ const PrimaryLayout = ({
           isTabletOrMobile ? "p-4" : "w-2/3"
         }`}
       >
-        {isTabletOrMobile ? <MobileNav /> : <Navbar />}
+        {!isTabletOrMobile ? <Navbar /> : null}
         {children}
       </div>
+      {isTabletOrMobile ? <MobileNav /> : null}
     </div>
   );
 };

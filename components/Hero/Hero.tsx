@@ -1,5 +1,6 @@
 import Image from "next/image";
 import useIsTouchScreen from "../../hooks/useIsTouch";
+import s from "./Hero.module.css";
 
 const painterTextStyle = {
   backgroundImage:
@@ -16,44 +17,23 @@ const painterTextStyle = {
 export default function Hero() {
   const { isTabletOrMobile } = useIsTouchScreen();
   return (
-    <>
-      {isTabletOrMobile ? (
-        <div
-          className="flex flex-col items-center md:grid md:grid-cols-2"
-          style={{ height: "500px", backgroundColor: "#f8f4f2" }}
-        >
-          <div className="my-auto ml-8">
-            <h1 className="text-6xl">Dan Sharkey's Painting</h1>
-            <p className="text-4xl">
-              <span style={painterTextStyle}>Painters</span>
-              for your housing projects
-            </p>
-          </div>
-          <img
-            className="flex items-center object-contain"
-            src="https://res.cloudinary.com/film-it/image/upload/v1620606048/Dan%20Sharkey%20Painting/houseBanner.png"
-            alt=""
-          />
-        </div>
-      ) : (
-        <div
-          className="flex flex-row items-center"
-          style={{ height: "500px", backgroundColor: "#f8f4f2" }}
-        >
-          <div className="my-auto ml-8">
-            <h1 className="text-6xl">Dan Sharkey's Painting</h1>
-            <p className="text-4xl">
-              <span style={painterTextStyle}>Painters</span>
-              for your housing projects
-            </p>
-          </div>
-          <img
-            className="flex items-center object-contain"
-            src="https://res.cloudinary.com/film-it/image/upload/v1620606048/Dan%20Sharkey%20Painting/houseBanner.png"
-            alt=""
-          />
-        </div>
-      )}
-    </>
+    <div
+      className={`${isTabletOrMobile ? s.mobileRoot : s.fullscreenRoot}`}
+      style={{ height: "500px", backgroundColor: "#f8f4f2" }}
+    >
+      <div className="my-auto ml-8">
+        <h1 className="text-6xl">Dan Sharkey's Painting</h1>
+        <p className="text-4xl">
+          <span style={painterTextStyle}>Painters</span>
+          for your housing projects
+        </p>
+      </div>
+      <img
+        className="flex items-center object-contain"
+        src="https://res.cloudinary.com/film-it/image/upload/v1620606048/Dan%20Sharkey%20Painting/houseBanner.png"
+        alt=""
+        style={{ maxHeight: "400px" }}
+      />
+    </div>
   );
 }
