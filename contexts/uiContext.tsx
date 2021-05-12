@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes";
 import React, { FC, useMemo } from "react";
 
 export interface State {
@@ -126,5 +127,7 @@ export const useUI = () => {
 };
 
 export const ManagedUIContext: FC = ({ children }) => (
-  <UIProvider>{children}</UIProvider>
+  <UIProvider>
+    <ThemeProvider>{children}</ThemeProvider>
+  </UIProvider>
 );

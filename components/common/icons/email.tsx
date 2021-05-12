@@ -3,18 +3,22 @@ import * as React from "react";
 type Props = {
   fillColor?: string;
   strokeColor?: string;
+  classes?: string;
 };
 
-function EmailIcon({ fillColor, strokeColor }: Props) {
+function EmailIcon({ fillColor, strokeColor, classes = "h-8 w-8" }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-8"
+      className={classes}
       viewBox="0 0 20 20"
       fill={fillColor}
     >
-      <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z" />
-      <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+      <path
+        fillRule="evenodd"
+        d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 }

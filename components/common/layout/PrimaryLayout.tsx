@@ -4,6 +4,7 @@ import MobileNav from "../../MobileNav";
 import DropdownMenu from "../DropdownMenu";
 import Navbar from "../Navbar/Navbar";
 import s from "./PrimaryLayout.module.css";
+import Footer from "../../Footer";
 
 type Props = {
   children: React.ReactNode;
@@ -24,8 +25,11 @@ const PrimaryLayout = ({
 
   return (
     <div style={SecondaryStyles}>
-      {isDesktopOrLaptop ? <Navbar /> : null}
-      <div className={`${s.root} ${noCenter ? "" : "mx-auto"}`}>{children}</div>
+      <div className={`${s.root} ${noCenter ? "" : "mx-auto"}`}>
+        {isDesktopOrLaptop ? <Navbar /> : null}
+        <main className="fit">{children}</main>
+        <Footer />
+      </div>
       {isTabletOrMobile ? <MobileNav /> : null}
     </div>
   );

@@ -20,6 +20,7 @@
   flex-direction: column;
   grid-area: two;
   height: 400px;
+  cursor: pointer;
 }
 
 .gridArea1 {
@@ -30,10 +31,11 @@
   flex-direction: column;
   grid-area: one;
   height: 400px;
+  cursor: pointer;
 }
 
 .root {
-  @apply relative bg-white rounded-2xl flex flex-col text-sm md:text-base;
+  @apply relative bg-white rounded-2xl flex flex-col text-sm md:text-base cursor-pointer;
 }
 
 @media (max-width: 1224px) {
@@ -44,9 +46,17 @@
   }
   .gridArea2 {
     grid-area: auto;
+    height: 100%;
   }
   .gridArea1 {
     grid-area: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesStyle {
+    grid-template-columns: 1fr;
   }
 }
 

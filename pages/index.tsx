@@ -21,7 +21,7 @@ const location = {
 
 export default function Home() {
   return (
-    <PrimaryLayout>
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -36,11 +36,16 @@ export default function Home() {
         <div className="grid gap-2 md:gap-4 grid-cols-1 sm:grid-cols-3">
           <div className="flex flex-col items-center p-4 cursor-pointer">
             <PhoneIcon fillColor="#3B82F6" />
-            <div className="md:my-4">+1(610) 605-0473</div>
+            <div className="md:my-4">
+              <a href="tel:+16106050473">+1(610)605-0473</a>
+            </div>
           </div>
           <div className="flex flex-col items-center p-4 cursor-pointer">
             <EmailIcon fillColor="#3B82F6" />
-            <div className="my-1 md:my-4">sharkeypainting@gmail.com</div>
+            <div className="my-1 md:my-4">
+              <a href="mailto:sharkeypainting@gmail.com"></a>
+              sharkeypainting@gmail.com
+            </div>
           </div>
           <div className="flex flex-col items-center p-4 cursor-pointer">
             <PinIcon fillColor="#3B82F6" />
@@ -61,41 +66,6 @@ export default function Home() {
       {/* <ColorSamples color="red" /> */}
 
       <Map />
-
-      <footer className={styles.footer}>
-        <div>
-          <h2 className="font-semibold text-2xl mb-4">
-            <a>Dan's Sharkey Painting</a>
-          </h2>
-          <p>
-            At the Start...Consider the Finish! Experienced Professionals of
-            Interior and Exterior Painting, Power Washing and Stucco Repairs for
-            Commercial and Residential Properties.
-          </p>
-        </div>
-        <div></div>
-        <div>
-          <h2 className="font-semibold text-lg mb-4">Contact Information</h2>
-          <div className="flex flex-col">
-            <div className="my-2">+1(610) 605-0473</div>
-
-            <div className="my-2">sharkeypainting@gmail.com</div>
-
-            <div className="my-2">142 Fiesta Town, Delaware County, PA</div>
-          </div>
-        </div>
-        <div>
-          <h2 className="font-semibold text-lg mb-4">Socials</h2>
-          <div>
-            <a
-              href="https://www.facebook.com/DanSharkeysPainting"
-              className="bg-blue-600 w-12 h-12 items-center justify-center flex rounded-lg"
-            >
-              <FacebookIcon />
-            </a>
-          </div>
-        </div>
-      </footer>
-    </PrimaryLayout>
+    </>
   );
 }

@@ -18,4 +18,18 @@ export const testimonals = [
     name: "John Doe",
     review: "It’s not about ideas. It’s about making ideas happen.",
   },
+  {
+    name: "John Doe",
+    review:
+      "Easily coordinated, great work. We’d put painting a couple of rooms ‘until’ we had extra time on our hands. That never materialized. So glad I did. 2 rooms done in 6 hours, looks great! Will definitely use the service again.",
+  },
+  {
+    name: "John Doe",
+    review:
+      "Easily coordinated, great work. We’d put painting a couple of rooms ‘until’ we had extra time on our hands. That never materialized. So glad I did. 2 rooms done in 6 hours, looks great! Will definitely use the service again.",
+  },
+  {
+    name: "John Doe",
+    review: "It’s not about ideas. It’s about making ideas happen.",
+  },
 ];

@@ -42,3 +42,88 @@ a {
   background: grey;
   margin-bottom: 30px;
 }
+
+/* .wizardForm form input[type="radio"],
+.modal_secondary .modal_content form input[type="radio"] {
+  display: none !important;
+}
+
+.wizardForm form input,
+.modal_secondary .modal_content form input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 55px;
+  text-indent: 0px;
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-weight: 400;
+  outline: none;
+  border: 1px solid #c9c9c9;
+  border-radius: 0;
+  padding: 0 0 0 15px;
+}
+
+.wizardForm form input[type="radio"]:checked + label,
+.modal_secondary .modal_content form input[type="radio"]:checked + label {
+  color: #fff;
+  background: #fdb913;
+  border-color: #f9b202;
+  font-family: "Helvetica Neue";
+  font-weight: 600;
+  transition: background-color 0.5s ease;
+}
+
+.wizardForm form input[type="radio"] + label,
+.modal_secondary .modal_content form input[type="radio"] + label {
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  float: left;
+  font-size: 16px;
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  height: 50px;
+  margin-bottom: -4px;
+  text-transform: none;
+  border-radius: 0;
+  transition: background-color 0.5s ease;
+} */
+
+.wizard-radio input[type="radio"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  /* overflow: hidden; */
+}
+
+.wizard-radio label {
+  float: left;
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid #c1c1c1;
+  width: calc(355px / 3);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: center;
+  margin: 0 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.wizard-radio input[type="radio"]:checked + label {
+  font-weight: 600;
+  color: #1a1a1a;
+  border: 1px solid #ff8c00;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

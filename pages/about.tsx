@@ -3,7 +3,7 @@ import Header from "../components/common/Header";
 
 export default function About() {
   return (
-    <PrimaryLayout>
+    <>
       <div className="bg-white p-4 rounded-lg mt-8" style={{ height: "100vh" }}>
         <Header title="About" subtitle="Our vision and story" />
         <div className="my-8 text-2xl font-bold">
@@ -56,6 +56,6 @@ export default function About() {
           </p>
         </div>
       </div>
-    </PrimaryLayout>
+    </>
   );
 }

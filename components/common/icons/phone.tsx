@@ -3,13 +3,14 @@ import * as React from "react";
 type Props = {
   fillColor?: string;
   strokeColor?: string;
+  classes?: string;
 };
 
-function PhoneIcon({ fillColor, strokeColor }: Props) {
+function PhoneIcon({ fillColor, strokeColor, classes = "h-8 w-8" }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-8"
+      className={classes}
       viewBox="0 0 20 20"
       fill={fillColor}
     >

@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import { LightboxContextProvider } from "../contexts/lightboxContext";
 import { ManagedUIContext } from "../contexts/uiContext";
 import React from "react";
+import PrimaryLayout from "../components/common/layout/PrimaryLayout";
 declare global {
   interface Window {
     fbAsyncInit: any;
@@ -32,7 +33,9 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <LightboxContextProvider>
       <ManagedUIContext>
-        <Component {...pageProps} />
+        <PrimaryLayout>
+          <Component {...pageProps} />
+        </PrimaryLayout>
       </ManagedUIContext>
     </LightboxContextProvider>
   );

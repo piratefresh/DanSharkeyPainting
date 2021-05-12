@@ -4,6 +4,8 @@ import s from "./Navbar.module.css";
 import ContactUs from "../../ContactUs";
 import { useUI } from "../../../contexts/uiContext";
 import Modal from "../Modal";
+import PhoneIcon from "../icons/phone";
+import EmailIcon from "../icons/email";
 
 const navStyles = {
   display: "grid",
@@ -32,7 +34,7 @@ const stickyStyles = {
 
 function Navbar() {
   const [isSticky, setSticky] = React.useState(false);
-  const { displayModal, openModal, closeModal, modalView } = useUI();
+  const { displayModal, closeModal, openModal } = useUI();
 
   const handleScroll = () => {
     window.scrollY > 140 ? setSticky(true) : setSticky(false);
@@ -58,15 +60,12 @@ function Navbar() {
               />
             </a>
           </Link>
-          <div>
+          <div className="flex flex-row items-center">
             <Link href="/">
               <a className={s.link}>Home</a>
             </Link>
             <Link href="/services">
               <a className={s.link}>Services</a>
-            </Link>
-            <Link href="/about">
-              <a className={s.link}>About</a>
             </Link>
             <Link href="/gallery">
               <a className={s.link}>Gallery</a>
@@ -74,6 +73,17 @@ function Navbar() {
             <Link href="/testimonals">
               <a className={s.link}>Testimonals</a>
             </Link>
+            <Link href="/about">
+              <a className={s.link}>About</a>
+            </Link>
+
+            <a href="tel:+16106050473" className="mx-2">
+              <PhoneIcon classes="h-5 w-5" />
+            </a>
+
+            <a href="mailto:sharkeypainting@gmail.com" className="mx-2">
+              <EmailIcon classes="w-5 h-5" />
+            </a>
           </div>
 
           <div

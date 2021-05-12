@@ -6,6 +6,7 @@ import { testimonals } from "./TestimonalData";
 
 export default function Testimonals() {
   const { isDesktopOrLaptop } = useIsTouchScreen();
+  console.log("testimonals: ", testimonals);
   return (
     <div
       className="p-4 my-8 rounded-2xl"
@@ -15,6 +16,7 @@ export default function Testimonals() {
         <div className="text-4xl font-bold text-blue-400">Testimonals</div>
         <p className="">Our Reviews</p>
       </div>
+
       {isDesktopOrLaptop ? (
         <Masonry
           breakpointCols={3}
@@ -23,10 +25,10 @@ export default function Testimonals() {
         >
           {testimonals.map((testimonal, index: number) => {
             return (
-              <TestimonalCard>
+              <TestimonalCard key={index}>
                 <div className={s.testimonalText}>
                   <span className="font-bold text-sm md:text-2xl">"</span>
-                  {testimonal.review}
+                  {testimonal.review} {index}
                   <span className="font-bold text-sm md:text-2xl">"</span>
                 </div>
                 <div className="flex flex-col font-semibold">
