@@ -36,14 +36,14 @@ export default function OurServices({ noTitle }: IProps) {
           classes={s.gridArea2}
         />
         <ServiceCard
-          imageUrl="services/stuccorepair.jpg"
+          imageUrl="services/stuccorepair.png"
           serviceTitle="Stucco Repair"
           serviceDesc="The foundation of your house is important. We know how important your stucco is to your EIFS. We will use our knowledge to determine the best steps and materials for your home."
           hrefUrl="/services/stuccorepair"
           classes={s.root}
         />
         <ServiceCard
-          imageUrl="services/Drywall-Repair-Services-scaled.jpg"
+          imageUrl="services/drywallrepair.png"
           serviceTitle="Drywall Repair"
           serviceDesc="We offer dry wall repairs. Any issues with your drywall will be expertely taken care off. We will ensure you the patching and painting will blend in perfectly."
           hrefUrl="/services/drywallrepair"
