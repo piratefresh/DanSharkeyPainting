@@ -1,41 +1,38 @@
 // import axios from 'axios'
 import nodemailer from "nodemailer";
+import fs from "fs";
+import path from "path";
+import handlebars from "handlebars";
 
 export default async function (req, res) {
-  let testAccount = await nodemailer.createTestAccount();
+  const filePath = path.join(`./public/`, "EmailContact.html");
+  const source = fs.readFileSync(filePath, "utf-8").toString();
+  const template = handlebars.compile(source);
+  const replacements = {
+    Username: req.body.Name,
+    messageBody: req.body.Message,
+  };
+  const htmlToSend = template(replacements);
   const transporter = await nodemailer.createTransport({
-    // port: 465,
-    // host: "smtp.gmail.com",
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465,
+    host: "smtp.gmail.com",
     auth: {
-      user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass, // generated ethereal password
+      user: "dansharkeyspainting@gmail.com", // generated ethereal user
+      pass: "sharkey88", // generated ethereal password
     },
-    // secure: true,
+    secure: true,
+    // host: "smtp.ethereal.email",
+    // port: 587,
+    // secure: false, // true for 465, false for other ports
   });
-
-  //   const mailData = {
-  //     from: "demo email",
-  //     to: "magnussithnilsen@gmail.com",
-  //     subject: `Message From ${req.body.Name}`,
-  //     text: req.body.Message + " | Sent from: " + req.body.Email,
-  //     html: `<div>${req.body.Message}</div><p>Sent from: ${req.body.Email}</p>`,
-  //   };
-
-  //   let info = await transporter.sendMail(mailData, function (err, info) {
-  //     if (err) console.log(err);
-  //     else console.log(info);
-  //   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Daniel Sharkey', // sender address
-    to: "magnussithnilsen@gmail.com", // list of receivers
-    subject: "Customer Contact ✔", // Subject line
-    text: `New Contact Message`, // plain text body
-    html: `<b>${req.body.Message}</b>`, // html body
+    from: "Dan Sharkeys Painting", // sender address
+    to: [req.body.Email, "dansharkeyspainting@gmail.com"], // list of receivers
+    subject: `Customer (${req.body.Name}) Enquiry 🧑‍🎨`, // Subje${req.body.Name}ct line
+    text: `Hey, ${req.body.Name}. Thanks for contacting us, we will contact you as soon as possible ${req.body.Message}`, // plain text body
+    html: htmlToSend, // html body
   });
 
   //   console.log(info);

@@ -19,10 +19,10 @@ export default function Services() {
         <Header title="Services" subtitle="Our Services" />
         <OurServices noTitle />
       </div>
-      <div onClick={() => openModal()}>Free Estimate</div>
+      {/* <div onClick={() => openModal()}>Free Estimate</div>
       <Modal open={displayModal} onClose={closeModal}>
         <WizardForm />
-      </Modal>
+      </Modal> */}
     </>
   );
 }

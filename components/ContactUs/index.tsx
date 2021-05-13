@@ -2,6 +2,7 @@ import { useForm, Controller, Path, UseFormRegister } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import FormInput from "../Form/FormInput";
 import FormTextArea from "../Form/FormTextArea";
+import Header from "../common/Header";
 
 type TData = {
   name: string;
@@ -31,7 +32,11 @@ type InputProps = {
   required: boolean;
 };
 
-function ContactUs() {
+interface IProps {
+  hasTitle?: boolean;
+}
+
+function ContactUs({ hasTitle = false }: IProps) {
   const {
     register,
     formState: { errors },
@@ -62,7 +67,13 @@ function ContactUs() {
   console.log(errors);
   return (
     <>
-      <div className="flex flex-row w-full">
+      <div className="flex flex-col w-full">
+        {hasTitle ? (
+          <Header
+            title="Contact Us"
+            subtitle="We will contact you for more information"
+          />
+        ) : null}
         <form
           className="flex flex-col w-full"
           onSubmit={handleSubmit(onSubmit)}

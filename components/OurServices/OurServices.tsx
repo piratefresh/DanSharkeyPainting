@@ -23,7 +23,7 @@ export default function OurServices({ noTitle }: IProps) {
         <ServiceCard
           imageUrl="services/interiorpaint.jpg"
           serviceTitle="Interior Painting"
-          serviceDesc="Paint the interior of your house"
+          serviceDesc="With our expertise and experience, we will make your interior painting project as trouble free as possible."
           hrefUrl="/services/interiorpainting"
           classes={s.gridArea1}
         />
@@ -31,35 +31,35 @@ export default function OurServices({ noTitle }: IProps) {
         <ServiceCard
           imageUrl="services/exteriorpaint.jpg"
           serviceTitle="Exterior Painting"
-          serviceDesc="Paint the exterior of your house"
+          serviceDesc="Let us take care of your exterior painting project. We know our ways around various exterior ammentities such as decks and fencing."
           hrefUrl="/services/exteriorpainting"
           classes={s.gridArea2}
         />
         <ServiceCard
-          imageUrl="services/custompaint.jpg"
+          imageUrl="services/stuccorepair.jpg"
           serviceTitle="Stucco Repair"
-          serviceDesc="Paint the exterior of your house"
+          serviceDesc="The foundation of your house is important. We know how important your stucco is to your EIFS. We will use our knowledge to determine the best steps and materials for your home."
           hrefUrl="/services/stuccorepair"
           classes={s.root}
         />
         <ServiceCard
-          imageUrl="services/bathroompaint.jpg"
-          serviceTitle="Dry Wall Repair"
-          serviceDesc="Paint the exterior of your house"
+          imageUrl="services/Drywall-Repair-Services-scaled.jpg"
+          serviceTitle="Drywall Repair"
+          serviceDesc="We offer dry wall repairs. Any issues with your drywall will be expertely taken care off. We will ensure you the patching and painting will blend in perfectly."
           hrefUrl="/services/drywallrepair"
           classes={s.root}
         />
         <ServiceCard
           imageUrl="services/wallpaperremoval.jpg"
           serviceTitle="Wall Paper Removal"
-          serviceDesc="Paint the exterior of your house"
+          serviceDesc="Don’t take a chance and damage your drywall, take advantage of our pro wallpaper removal service."
           hrefUrl="/services/wallpaperremoval"
           classes={s.root}
         />
         <ServiceCard
           imageUrl="services/pwashing.jpg"
           serviceTitle="Power Washing"
-          serviceDesc="Paint the exterior of your house"
+          serviceDesc="Mold, dirt and old paint can be very annoying. Our power wash service will take quick care of these woes."
           hrefUrl="/services/powerwashing"
           classes={s.root}
         />
