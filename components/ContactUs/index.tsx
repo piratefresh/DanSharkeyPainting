@@ -44,12 +44,7 @@ function ContactUs({ hasTitle = false }: IProps) {
     handleSubmit,
   } = useForm<IFormValues>({ mode: "onChange" });
 
-  const handleFormSubmit = (data) => {
-    alert(JSON.stringify(data, null));
-  };
-
   const onSubmit = (data: IFormValues) => {
-    alert(JSON.stringify(data, null));
     fetch("/api/sendEmailContact", {
       method: "POST",
       headers: {
