@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import PrimaryLayout from "../components/common/layout/PrimaryLayout";
 import PinIcon from "../components/common/icons/pin";
 import EmailIcon from "../components/common/icons/email";
 import PhoneIcon from "../components/common/icons/phone";
@@ -11,7 +10,6 @@ import Testimonals from "../components/Testimonals";
 import Map from "../components/Map";
 import Hero from "../components/Hero";
 import Header from "../components/common/Header";
-import FacebookIcon from "../components/common/icons/facebookIcon";
 
 const location = {
   address: "1600 Amphitheatre Parkway, Mountain View, california.",
@@ -23,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Dan Sharkeys Painting</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
