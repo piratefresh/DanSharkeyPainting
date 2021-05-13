@@ -23,7 +23,7 @@ export default function Map() {
       height="400px"
       mapboxApiAccessToken="pk.eyJ1IjoibWFnbmlsIiwiYSI6ImNqd3Vxa3pzbTAwNXQ0Ym8yZzVrdmxhcHUifQ.tkN3T_f6Ef38L7S2uZkdQA"
       mapStyle="mapbox://styles/magnil/cjsncgqdf1xua1gri9yaw0hyo"
-      onViewportChange={(viewport) => setViewport(viewport)}
+      // onViewportChange={(viewport) => setViewport(viewport)}
     >
       <Marker
         longitude={marker.longitude}

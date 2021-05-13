@@ -1,9 +1,14 @@
 import styles from "../../styles/Home.module.css";
+import Modal from "../../components/common/Modal";
+import ContactUs from "../../components/ContactUs";
+import Button from "../../components/common/Button";
+import { useUI } from "../../contexts/uiContext";
 import EmailIcon from "../common/icons/email";
 import FacebookIcon from "../common/icons/facebookIcon";
 import PhoneIcon from "../common/icons/phone";
 
 export default function Footer() {
+  const { displayModal, closeModal, openModal } = useUI();
   return (
     <footer className={styles.footer}>
       <div>
@@ -49,6 +54,15 @@ export default function Footer() {
             <EmailIcon fillColor="#fff" classes="w-5 h-5" />
           </a>
         </div>
+        <Button onClick={openModal}>Contact Us</Button>
+        <Modal open={displayModal} onClose={closeModal}>
+          <div
+            className="mx-2 flex my-8 p-4 rounded-2xl"
+            style={{ backgroundColor: "rgb(250, 250, 255)" }}
+          >
+            <ContactUs hasTitle />
+          </div>
+        </Modal>
       </div>
     </footer>
   );
